@@ -1,5 +1,7 @@
 package Objects_and_classes;
 
+import java.util.Objects;
+
 public class Book {
     private final Author author;
     private final String title;
@@ -24,7 +26,7 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return year == book.year;
+        return year == book.year && Objects.equals(author, book.author) && Objects.equals(title, book.title);
     }
 
     @Override

@@ -10,8 +10,11 @@ public class Main {
         System.out.println(book1);
         System.out.println(book2);
         if (book1.equals(book2)) {
-            System.out.println("Год издания одинаковый");
-        } else System.out.println("Год издания разный");
+            System.out.println("Книги одинаковые");
+        } else System.out.println("Книги разные");
+        if (author1.equals(author2)) {
+            System.out.println("Авторы одинаковые");
+        } else System.out.println("Авторы разные");
 
     }
 }
