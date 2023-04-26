@@ -18,6 +18,6 @@ public record Author(String name, String firstName) {
 
     @Override
     public int hashCode() {
-        return 0;
+        return java.util.Objects.hash(name, firstName);
     }
 }
