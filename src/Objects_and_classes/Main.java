@@ -1,19 +1,20 @@
 package Objects_and_classes;
 
 public class Main {
-
-
     public static void main(String[] args) {
-        Author authorWarAndPeace = new Author("Лев", "Тлстой");
-        Author authorDeadSouls = new Author("Николай", "Гоголь");
-        Book deadSouls = new Book(authorDeadSouls, "Мёртвые души", 1842);
-        Book warAndPeace = new Book(authorWarAndPeace, "Война и мир", 1873);
-        warAndPeace.setYear(1961);
-        System.out.println("Автор - " + warAndPeace.getAuthor().getName() + " " +  warAndPeace.getAuthor().getFirstName());
-        System.out.println("Название - " + warAndPeace.getTitle());
-        System.out.println("Год издания - " + warAndPeace.getYear());
-        System.out.println("Автор - " + deadSouls.getAuthor().getName() + " " + deadSouls.getAuthor().getFirstName());
-        System.out.println("deadSouls.getTitle() = " + deadSouls.getTitle());
-        System.out.println("Год издания - " + deadSouls.getYear());
+        Author author1 = new Author("Лев", "Толстой");
+        Author author2 = new Author("Николай", "Гоголь");
+        Book book1 = new Book(author2, "Мёртвые души", 1842);
+        Book book2 = new Book(author1, "Война и мир", 1873);
+        book2.setYear(1841);
+        System.out.println(book1);
+        System.out.println(book2);
+        if (book1.equals(book2)) {
+            System.out.println("Книги одинаковые");
+        } else System.out.println("Книги разные");
+        if (author1.equals(author2)) {
+            System.out.println("Авторы одинаковые");
+        } else System.out.println("Авторы разные");
+
     }
 }
