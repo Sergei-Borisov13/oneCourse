@@ -1,19 +1,9 @@
 package Objects_and_classes;
 
-public class Author {
-    private String name;
-    private String firstName;
+public record Author(String name, String firstName) {
 
-    public Author(String name, String firstName) {
-        this.name = name;
-        this.firstName = firstName;
-    }
-
-    public String getFirstName() {
-        return this.firstName;
-    }
-    public String getName() {
-        return this.name;
+    public String toString() {
+        return name + " " + firstName;
     }
 
 }
